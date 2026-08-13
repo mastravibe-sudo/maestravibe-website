@@ -13,9 +13,16 @@ export default function Footer() {
               MAESTRA ARCH
             </Link>
             <p className="text-sm leading-relaxed text-gray-400">
-              Designing spaces, creating futures — modern architectural design, CAD drafting,
-              and 3D visualization for ambitious projects.
+              Architectural & Engineering Division of Maestra Group — design, CAD drafting,
+              BIM documentation, 3D visualization, and construction support for
+              residential and commercial projects.
             </p>
+            <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-[#d4af37]">
+              Designing the Future. Building with Precision.
+            </p>
+            <a href="mailto:info@maestraarch.com" className="mt-3 block text-sm text-gray-400 transition-colors hover:text-[#d4af37]">
+              info@maestraarch.com
+            </a>
           </div>
 
           <div className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-3 lg:justify-items-end">

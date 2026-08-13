@@ -8,12 +8,20 @@ export default function HeroSlider() {
     <>
       {/* ===== FULL-BLEED HERO ===== */}
       <div className="relative flex min-h-screen items-center overflow-hidden bg-[#05070d]">
-        {/* Background photo */}
-        <img
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80"
-          alt=""
+        {/* Background video — falls back to the poster image if the video
+            file isn't found or while it's loading. Replace the <source> src
+            with your own file once you have it. */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80"
           className="absolute inset-0 h-full w-full object-cover"
-        />
+        >
+          <source src="/videos/hero-placeholder.mp4" type="video/mp4" />
+        </video>
         {/* Gold/black tint overlay for readability + brand feel */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#05070d] via-[#05070d]/70 to-[#05070d]/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#05070d]/80 via-transparent to-[#05070d]/40" />
@@ -38,8 +46,9 @@ export default function HeroSlider() {
           </h1>
 
           <p className="mt-6 max-w-md text-base leading-relaxed text-gray-300">
-            We combine creative design and compelling storytelling to craft
-            memorable spaces — from concept sketches to construction-ready drawings.
+            Architectural design, CAD drafting, and 3D visualization for
+            residential and commercial projects — precise, buildable, and
+            delivered on time.
           </p>
 
           <div className="mt-10">

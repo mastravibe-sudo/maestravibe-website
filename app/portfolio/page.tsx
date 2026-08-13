@@ -14,7 +14,7 @@ export default function PortfolioPage() {
       <PageHero
         eyebrow="Our Work"
         title="Selected projects"
-        description="A look at the residential, commercial, and public spaces we've designed and documented."
+        description="A look at the residential and commercial projects we've designed, drafted, and documented."
       />
 
       {/* Large, alternating, full-width project rows — not a small-card grid */}

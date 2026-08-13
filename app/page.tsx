@@ -7,7 +7,7 @@ import Reveal from '@/components/site/Reveal';
 import TrustStats from '@/components/site/TrustStats';
 import Testimonials from '@/components/site/Testimonials';
 import FAQAccordion from '@/components/site/FAQAccordion';
-import { PROJECTS } from '@/lib/projects';
+import { getProject } from '@/lib/projects';
 
 const SERVICES_PREVIEW = [
   { title: 'Architectural Design', desc: 'Concept to construction-ready drawings, tailored to your site and vision.' },
@@ -16,7 +16,11 @@ const SERVICES_PREVIEW = [
 ];
 
 export default function HomePage() {
-  const featured = PROJECTS.slice(0, 3);
+  const featured = [
+    getProject('meridian-residence'),
+    getProject('horizon-corporate-tower'),
+    getProject('coastal-villa'),
+  ].filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <>
