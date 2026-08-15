@@ -6,12 +6,6 @@
 export type Drawing = {
   label: string;
   src: string;
-  /** 'pdf' renders with the browser's native PDF viewer (crisp at any
-   * zoom level, since PDFs are usually vector). Defaults to 'image'. */
-  type?: 'image' | 'pdf';
-  /** For type: 'pdf' — a raster thumbnail to show on the card, since
-   * PDFs can't be used directly as an <img> src. */
-  thumb?: string;
 };
 
 export type Project = {
@@ -64,35 +58,28 @@ export const PROJECTS: Project[] = [
     description:
       'A mixed-use building combining ground-floor parking, office space across the 1st and 2nd floors, and residential apartments on the 3rd through 5th floors, topped with a furnished rooftop terrace. We delivered the complete documentation package — all floor plans, building section, four elevations, and construction details — along with 3D massing studies and a final exterior visualization.',
   },
-    {
+  {
     slug: 'crestline-single-story-residence',
     title: 'Crestline Single-Story Residence',
     category: 'Residential',
     location: 'Client Project',
     year: '2026',
-
     cover: '/portfolio/single-story-house/ssh-3d-exterior.png',
-
     gallery: [
       '/portfolio/single-story-house/ssh-3d-exterior.png',
       '/portfolio/single-story-house/ssh-3d-front.png',
-      '/portfolio/single-story-house/3d-rear.png',
-      '/portfolio/single-story-house/3d-side-a.png',
-      '/portfolio/single-story-house/3d-side-b.png',
       '/portfolio/single-story-house/ssh-interior-living.png',
       '/portfolio/single-story-house/ssh-interior-bedroom-dining.png',
     ],
-
     drawings: [
-      { label: 'Floor Plan (A1)', src: '/portfolio/single-story-house/ssh-drawings.pdf#page=1', type: 'pdf', thumb: '/portfolio/single-story-house/ssh-thumb-1.png' },
-      { label: 'Construction Details (A2)', src: '/portfolio/single-story-house/ssh-drawings.pdf#page=2', type: 'pdf', thumb: '/portfolio/single-story-house/ssh-thumb-2.png' },
-      { label: 'Building Section (A3)', src: '/portfolio/single-story-house/ssh-drawings.pdf#page=3', type: 'pdf', thumb: '/portfolio/single-story-house/ssh-thumb-3.png' },
-      { label: 'Front Elevation (A4)', src: '/portfolio/single-story-house/ssh-drawings.pdf#page=4', type: 'pdf', thumb: '/portfolio/single-story-house/ssh-thumb-4.png' },
-      { label: 'Rear Elevation (A5)', src: '/portfolio/single-story-house/ssh-drawings.pdf#page=5', type: 'pdf', thumb: '/portfolio/single-story-house/ssh-thumb-5.png' },
-      { label: 'Left Elevation (A6)', src: '/portfolio/single-story-house/ssh-drawings.pdf#page=6', type: 'pdf', thumb: '/portfolio/single-story-house/ssh-thumb-6.png' },
-      { label: 'Right Elevation (A7)', src: '/portfolio/single-story-house/ssh-drawings.pdf#page=7', type: 'pdf', thumb: '/portfolio/single-story-house/ssh-thumb-7.png' },
+      { label: 'Floor Plan', src: '/portfolio/single-story-house/ssh-floor-plan.png' },
+      { label: 'Construction Details', src: '/portfolio/single-story-house/ssh-details.png' },
+      { label: 'Building Section', src: '/portfolio/single-story-house/ssh-section.png' },
+      { label: 'Front Elevation', src: '/portfolio/single-story-house/ssh-elevation-front.png' },
+      { label: 'Rear Elevation', src: '/portfolio/single-story-house/ssh-elevation-rear.png' },
+      { label: 'Left Elevation', src: '/portfolio/single-story-house/ssh-elevation-left.png' },
+      { label: 'Right Elevation', src: '/portfolio/single-story-house/ssh-elevation-right.png' },
     ],
-
     summary: 'A single-story family home with an open living and dining layout.',
     description:
       'A compact single-story residence designed around an open living and dining layout, with a full interior furniture plan to help the client visualize each room before construction. We delivered the floor plan, building section, all four elevations, and a construction details sheet covering door, window, and foundation conditions.',
