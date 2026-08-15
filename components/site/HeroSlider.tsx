@@ -2,8 +2,11 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function HeroSlider() {
+  const [muted, setMuted] = useState(true);
+
   return (
     <>
       {/* ===== FULL-BLEED HERO ===== */}
@@ -12,54 +15,24 @@ export default function HeroSlider() {
             file isn't found or while it's loading. Replace the <source> src
             with your own file once you have it. */}
         <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src="/videos/hero-placeholder.mp4" type="video/mp4" />
-        </video>
-        {/* Gold/black tint overlay for readability + brand feel */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#05070d] via-[#05070d]/70 to-[#05070d]/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#05070d]/80 via-transparent to-[#05070d]/40" />
-
-        {/* Giant ghost text behind headline */}
-        <h2
-          aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[18%] -translate-x-1/2 select-none whitespace-nowrap text-[18vw] font-black uppercase leading-none tracking-tighter text-white/5"
-        >
-          ARCH
-        </h2>
-
-        {/* Content */}
-        <div className="relative mx-auto w-full max-w-7xl px-6 pt-32 lg:px-8">
-          <span className="inline-block rounded-full border border-[#d4af37]/40 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#d4af37]">
-            Built for sustainable growth
-          </span>
-
-          <h1 className="mt-6 max-w-2xl text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
-            Designing spaces for{' '}
-            <span className="font-serif italic text-[#d4af37]">modern living</span>
-          </h1>
-
-          <p className="mt-6 max-w-md text-base leading-relaxed text-gray-300">
-            Architectural design, CAD drafting, and 3D visualization for
-            residential and commercial projects — precise, buildable, and
-            delivered on time.
-          </p>
-
-          <div className="mt-10">
-            <Link
-              href="/contact"
-              className="inline-block rounded-full bg-[#d4af37] px-8 py-3 text-sm font-bold uppercase tracking-widest text-black transition-all hover:bg-[#e8c766]"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
+  autoPlay
+  muted={muted}
+  loop
+  playsInline
+  preload="auto"
+  poster="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80"
+  className="absolute inset-0 z-0 h-full w-full object-cover"
+>
+  <source src="/videos/hero-placeholder.mp4" type="video/mp4" />
+</video>
+       <button
+  type="button"
+  onClick={() => setMuted(prev => !prev)}
+  className="absolute bottom-10 left-6 z-10 rounded-full border border-[#d4af37]/40 bg-black/50 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white backdrop-blur-md transition hover:bg-black/70"
+  aria-label={muted ? 'Unmute video' : 'Mute video'}
+>
+  {muted ? '🔇 Unmute' : '🔊 Mute'}
+</button>
 
         {/* Floating preview card, bottom-right */}
         <div className="absolute bottom-10 right-6 hidden w-64 rounded-2xl border border-[#d4af37]/20 bg-[#05070d]/80 p-4 backdrop-blur-md sm:block lg:right-16">

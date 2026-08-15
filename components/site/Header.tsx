@@ -57,7 +57,7 @@ export default function Header() {
           <img
             src="/images/maestra-arch-badge.png"
             alt="Maestra Arch"
-            className="h-10 w-10 object-contain"
+            className="h-30 w-60 object-contain"
           />
           <span className="text-sm font-bold uppercase tracking-[0.2em] text-white">
             Maestra <span className="text-shimmer-gold">Arch</span>

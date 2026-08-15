@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="mb-16 flex flex-col justify-between gap-12 lg:flex-row">
           <div className="lg:max-w-xs">
             <Link href="/" className="mb-4 flex items-center gap-3 text-3xl font-bold tracking-tighter text-shimmer-gold">
-              <img src="/images/maestra-arch-badge.png" alt="" className="h-10 w-10 object-contain" />
+              <img src="/images/maestra-arch-badge.png" alt="" className="h-20 w-20 object-contain" />
               MAESTRA ARCH
             </Link>
             <p className="text-sm leading-relaxed text-gray-400">

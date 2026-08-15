@@ -55,7 +55,7 @@ export default function AboutPage() {
               <img
                 src="/images/maestra-arch-badge.png"
                 alt="Maestra Arch"
-                className="relative h-64 w-64 object-contain drop-shadow-[0_0_40px_rgba(212,175,55,0.2)] sm:h-80 sm:w-80"
+                className="relative h-100 w-100 object-contain drop-shadow-[0_0_40px_rgba(212,175,55,0.2)] sm:h-80 sm:w-80"
               />
             </div>
           </Reveal>
