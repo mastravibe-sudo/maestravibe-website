@@ -20,8 +20,8 @@ export default function Footer() {
             <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-[#d4af37]">
               Designing the Future. Building with Precision.
             </p>
-            <a href="mailto:info@maestraarch.com" className="mt-3 block text-sm text-gray-400 transition-colors hover:text-[#d4af37]">
-              info@maestraarch.com
+            <a href="mailto:maestraarch@gmail.com" className="mt-3 block text-sm text-gray-400 transition-colors hover:text-[#d4af37]">
+              maestraarch@gmail.com
             </a>
           </div>
 
